@@ -1,4 +1,4 @@
-# Rocketsea OmniStack 10.0 Week :rocket:
+# Rocketseat OmniStack 10.0 Week :rocket:
 
 ## Technologies used
 
