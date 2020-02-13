@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "aca7f10b-a720-4399-b6f4-1e03828db357",
+		"name": "omnistack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Devs",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6d527e6a-9d15-40b8-9d26-866b527158dd",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"github_username\": \"chhollerveger\",\n\t\"techs\": \"Node.js, ReactJS, React Native\",\n\t\"latitude\": -30.0926051,\n\t\"longitude\": -51.0774087\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/devs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"devs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Devs",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6d527e6a-9d15-40b8-9d26-866b527158dd",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/devs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"devs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Devs",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6d527e6a-9d15-40b8-9d26-866b527158dd",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/search?latitude=-30.0926051&longitude=-51.0774087&techs=Node.js",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "-30.0926051"
+						},
+						{
+							"key": "longitude",
+							"value": "-51.0774087"
+						},
+						{
+							"key": "techs",
+							"value": "Node.js"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
